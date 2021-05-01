@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>文章 on NeoSuDoc</title>
+    <link>/posts/</link>
+    <description>Recent content in 文章 on NeoSuDoc</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy; 2021 &lt;a href=&#34;https://neosu.info/&#34;&gt;NeoSu&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Fri, 30 Apr 2021 23:25:30 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>测试文章</title>
+      <link>/posts/mytest/</link>
+      <pubDate>Fri, 30 Apr 2021 23:25:30 +0800</pubDate>
+      
+      <guid>/posts/mytest/</guid>
+      <description>测试文章 Hello, Hugo</description>
+    </item>
+    
+  </channel>
+</rss>
