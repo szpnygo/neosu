@@ -11,28 +11,28 @@
     <lastBuildDate>Fri, 30 Apr 2021 23:25:30 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>测试文章</title>
-      <link>/posts/mytest/</link>
+      <link>/posts/mytest.html</link>
       <pubDate>Fri, 30 Apr 2021 23:25:30 +0800</pubDate>
       
-      <guid>/posts/mytest/</guid>
+      <guid>/posts/mytest.html</guid>
       <description>测试文章 Hello, Hugo</description>
     </item>
     
     <item>
       <title>Chapter 1</title>
-      <link>/docs/example-doc/nested-chapter/chapter-1/</link>
+      <link>/docs/example-doc/nested-chapter/chapter-1.html</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/docs/example-doc/nested-chapter/chapter-1/</guid>
+      <guid>/docs/example-doc/nested-chapter/chapter-1.html</guid>
       <description>&lt;p&gt;This is chapter 1 of nested chapter.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Chapter 1</title>
-      <link>/docs/golang-doc/chapter-1/</link>
+      <link>/docs/golang-doc/chapter-1.html</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/docs/golang-doc/chapter-1/</guid>
+      <guid>/docs/golang-doc/chapter-1.html</guid>
       <description>&lt;p&gt;This is chapter 1 of example doc.
 sdf
 sadf
@@ -43,55 +43,55 @@ fsd&lt;/p&gt;</description>
     
     <item>
       <title>Chapter 2</title>
-      <link>/docs/example-doc/nested-chapter/chapter-2/</link>
+      <link>/docs/example-doc/nested-chapter/chapter-2.html</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/docs/example-doc/nested-chapter/chapter-2/</guid>
+      <guid>/docs/example-doc/nested-chapter/chapter-2.html</guid>
       <description>&lt;p&gt;This is chapter 2 of nested chapter.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Chapter 2</title>
-      <link>/docs/golang-doc/chapter-2/</link>
+      <link>/docs/golang-doc/chapter-2.html</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/docs/golang-doc/chapter-2/</guid>
+      <guid>/docs/golang-doc/chapter-2.html</guid>
       <description>&lt;p&gt;This is chapter 2 of example doc.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>example Chapter 1</title>
-      <link>/docs/example-doc/chapter-1/</link>
+      <link>/docs/example-doc/chapter-1.html</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/docs/example-doc/chapter-1/</guid>
+      <guid>/docs/example-doc/chapter-1.html</guid>
       <description>&lt;p&gt;This is chapter 1 of example doc.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>example Chapter 2</title>
-      <link>/docs/example-doc/chapter-2/</link>
+      <link>/docs/example-doc/chapter-2.html</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/docs/example-doc/chapter-2/</guid>
+      <guid>/docs/example-doc/chapter-2.html</guid>
       <description>&lt;p&gt;This is chapter 2 of example doc.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>golang Chapter 1</title>
-      <link>/docs/golang-doc/nested-chapter/chapter-1/</link>
+      <link>/docs/golang-doc/nested-chapter/chapter-1.html</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/docs/golang-doc/nested-chapter/chapter-1/</guid>
+      <guid>/docs/golang-doc/nested-chapter/chapter-1.html</guid>
       <description>&lt;p&gt;This is chapter 1 of nested chapter.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>golang Chapter 2</title>
-      <link>/docs/golang-doc/nested-chapter/chapter-2/</link>
+      <link>/docs/golang-doc/nested-chapter/chapter-2.html</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/docs/golang-doc/nested-chapter/chapter-2/</guid>
+      <guid>/docs/golang-doc/nested-chapter/chapter-2.html</guid>
       <description>&lt;p&gt;This is chapter 2 of nested chapter.&lt;/p&gt;</description>
     </item>
     
