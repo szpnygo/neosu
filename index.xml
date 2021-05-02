@@ -8,7 +8,7 @@
     <language>zh</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#34;https://neosu.info/&#34;&gt;NeoSu&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Fri, 30 Apr 2021 23:25:30 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>测试文章</title>
       <link>/posts/mytest.html</link>
@@ -28,35 +28,12 @@
     </item>
     
     <item>
-      <title>Chapter 1</title>
-      <link>/docs/golang-doc/chapter-1.html</link>
-      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/golang-doc/chapter-1.html</guid>
-      <description>&lt;p&gt;This is chapter 1 of example doc.
-sdf
-sadf
-dsa
-fsad
-fsd&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Chapter 2</title>
       <link>/docs/example-doc/nested-chapter/chapter-2.html</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>/docs/example-doc/nested-chapter/chapter-2.html</guid>
       <description>&lt;p&gt;This is chapter 2 of nested chapter.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Chapter 2</title>
-      <link>/docs/golang-doc/chapter-2.html</link>
-      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/golang-doc/chapter-2.html</guid>
-      <description>&lt;p&gt;This is chapter 2 of example doc.&lt;/p&gt;</description>
     </item>
     
     <item>

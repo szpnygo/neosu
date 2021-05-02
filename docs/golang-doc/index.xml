@@ -1,36 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Golang Doc on NeoSuDoc</title>
+    <title>Golang学习 on NeoSuDoc</title>
     <link>/docs/golang-doc.html</link>
-    <description>Recent content in Golang Doc on NeoSuDoc</description>
+    <description>Recent content in Golang学习 on NeoSuDoc</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#34;https://neosu.info/&#34;&gt;NeoSu&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Fri, 16 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/docs/golang-doc/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Chapter 1</title>
-      <link>/docs/golang-doc/chapter-1.html</link>
-      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/golang-doc/chapter-1.html</guid>
-      <description>&lt;p&gt;This is chapter 1 of example doc.
-sdf
-sadf
-dsa
-fsad
-fsd&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Chapter 2</title>
-      <link>/docs/golang-doc/chapter-2.html</link>
-      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/golang-doc/chapter-2.html</guid>
-      <description>&lt;p&gt;This is chapter 2 of example doc.&lt;/p&gt;</description>
-    </item>
-    
+    <lastBuildDate>Sun, 02 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="/docs/golang-doc/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

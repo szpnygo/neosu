@@ -3,13 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/authors.html</loc>
-    <lastmod>2021-04-30T23:25:30+08:00</lastmod>
+    <lastmod>2021-05-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories.html</loc>
+    <lastmod>2021-05-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/docs/golang-doc.html</loc>
+    <lastmod>2021-05-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/docs/golang-doc/nested-chapter.html</loc>
+    <lastmod>2021-05-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/authors/neosu.html</loc>
-    <lastmod>2021-04-30T23:25:30+08:00</lastmod>
+    <lastmod>2021-05-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/</loc>
-    <lastmod>2021-04-30T23:25:30+08:00</lastmod>
+    <lastmod>2021-05-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags.html</loc>
+    <lastmod>2021-05-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3.html</loc>
+    <lastmod>2021-05-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3.html</loc>
+    <lastmod>2021-05-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/docs.html</loc>
+    <lastmod>2021-05-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/posts.html</loc>
     <lastmod>2021-04-30T23:25:30+08:00</lastmod>
@@ -20,13 +41,7 @@
     <loc>/docs/example-doc/nested-chapter/chapter-1.html</loc>
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/docs/golang-doc/chapter-1.html</loc>
-    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/docs/example-doc/nested-chapter/chapter-2.html</loc>
-    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/docs/golang-doc/chapter-2.html</loc>
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/docs/example-doc/chapter-1.html</loc>
@@ -44,22 +59,9 @@
     <loc>/docs/golang-doc/nested-chapter/chapter-2.html</loc>
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/docs/golang-doc.html</loc>
-    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/docs/example-doc/nested-chapter.html</loc>
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/docs/golang-doc/nested-chapter.html</loc>
-    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/docs.html</loc>
-    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories.html</loc>
-  </url><url>
     <loc>/series.html</loc>
-  </url><url>
-    <loc>/tags.html</loc>
   </url>
 </urlset>
