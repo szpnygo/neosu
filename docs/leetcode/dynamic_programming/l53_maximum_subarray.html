@@ -3,9 +3,9 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>Golang学习 | NeoSuDoc</title>
-<meta name="description" content=""/>
-<meta name="keywords" content=""/>
+<title>53.最大子序和 | LeetCode学习 | NeoSuDoc</title>
+<meta name="description" content="LeetCode第53题，最大子序和，动态规划解法"/>
+<meta name="keywords" content="leetcode,动态规划,算法,dynamic programming,Golang,数组,string,array"/>
 <link rel="stylesheet" href="/css/eureka.min.css">
 <script defer src="/js/eureka.min.js"></script>
 
@@ -66,7 +66,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/images/icon_hu3c4c8b692d5a46ca71b4ca2347fe7b62_98847_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="Golang学习文档总结">
+  content="最大子序和">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -78,8 +78,16 @@
       "item":"/docs.html"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"Golang学习",
-      "item":"/docs/golang-doc.html"}]
+      "name":"LeetCode学习",
+      "item":"/docs/leetcode.html"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"动态规划",
+      "item":"/docs/leetcode/dynamic_programming.html"},{
+      "@type": "ListItem",
+      "position": 4 ,
+      "name":"53.最大子序和",
+      "item":"/docs/leetcode/dynamic_programming/l53_maximum_subarray.html"}]
 }
 </script>
 
@@ -91,9 +99,11 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "/docs/golang-doc.html"
+        "@id": "/docs/leetcode/dynamic_programming/l53_maximum_subarray.html"
     },
-    "headline": "Golang学习 | NeoSuDoc","wordCount":  308 ,
+    "headline": "53.最大子序和 | LeetCode学习 | NeoSuDoc","datePublished": "2021-05-07T00:00:00+00:00",
+    "dateModified": "2021-05-07T00:00:00+00:00",
+    "wordCount":  462 ,
     "author": {
         "@type": "Person",
         "name": "neosu"
@@ -106,20 +116,20 @@
             "url": "/images/icon.png"
         }
         },
-    "description": "Golang学习文档总结"
+    "description": "最大子序和"
 }
-</script><meta property="og:title" content="Golang学习 | NeoSuDoc" />
-<meta property="og:type" content="website" />
+</script><meta property="og:title" content="53.最大子序和 | LeetCode学习 | NeoSuDoc" />
+<meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="/images/icon.png">
 
 
-<meta property="og:url" content="/docs/golang-doc.html" />
+<meta property="og:url" content="/docs/leetcode/dynamic_programming/l53_maximum_subarray.html" />
 
 
 
-<meta property="og:description" content="Golang学习文档总结" />
+<meta property="og:description" content="最大子序和" />
 
 
 
@@ -135,18 +145,31 @@
 
 
 
-<meta property="og:updated_time" content="2021-05-02T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-05-07T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2021-05-07T00:00:00&#43;00:00" />
 
 
 
 <meta property="article:section" content="docs" />
 
 
-<meta property="article:tag" content="学习文档" />
+<meta property="article:tag" content="数组" />
+
+<meta property="article:tag" content="动态规划" />
 
 
 
-<link rel="alternate" type="application/rss+xml" href="/docs/golang-doc/index.xml" title="NeoSuDoc" />
+
+
+
+
+
+
+
+
+
 
 <body class="flex flex-col min-h-screen">
   <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
@@ -166,7 +189,7 @@
         class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
         <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
             <a href="/posts.html" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文章</a>
-            <a href="/docs/golang-doc.html" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">Golang</a>
+            <a href="/docs/golang-doc.html" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Golang</a>
             <a href="/docs/leetcode.html" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">LeetCode</a>
         </div>
 
@@ -230,6 +253,16 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div id="sidebar-title" class="md:hidden mx-4 px-2 pt-4 pb-2 md:border-b text-tertiary-text md:text-primary-text">
     <span class="font-semibold">目录</span>
     <i class="fas fa-caret-right ml-1"></i>
@@ -238,8 +271,8 @@
 <div id="sidebar-toc"
     class="hidden md:block overflow-y-auto mx-6 md:mx-0 pr-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent">
     <div class="flex flex-wrap ml-4 -mr-2 p-2 bg-secondary-bg md:bg-primary-bg rounded">
-        <a class="text-eureka hover:text-eureka"
-            href="/docs/golang-doc.html">Golang学习</a>
+        <a class=" hover:text-eureka"
+            href="/docs/leetcode.html">LeetCode学习</a>
         
         
         
@@ -254,7 +287,7 @@
     <li class="py-2">
         <div class=" pb-2 ">
             <a class=" hover:text-eureka"
-                href="/docs/golang-doc/nested-chapter.html">Golang面试题</a>
+                href="/docs/leetcode/dynamic_programming.html">动态规划</a>
         </div>
         
         
@@ -264,19 +297,8 @@
     
     <li class="py-2">
         <div class="">
-            <a class=" hover:text-eureka"
-                href="/docs/golang-doc/nested-chapter/chapter-1.html">golang Chapter 1</a>
-        </div>
-        
-    </li>
-    
-    
-    
-    
-    <li class="py-2">
-        <div class="">
-            <a class=" hover:text-eureka"
-                href="/docs/golang-doc/nested-chapter/chapter-2.html">golang Chapter 2</a>
+            <a class=" text-eureka  hover:text-eureka"
+                href="/docs/leetcode/dynamic_programming/l53_maximum_subarray.html">53.最大子序和</a>
         </div>
         
     </li>
@@ -294,16 +316,20 @@
 
 
 
+
+
+
+
             </div>
 
         </div>
         <div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
             <div class="w-full lg:w-3/4 pl-6 ml-0 mr-auto">
-                <h1 class="font-bold text-3xl text-primary-text">Golang学习</h1>
+                <h1 class="font-bold text-3xl text-primary-text">53.最大子序和</h1>
                 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2021-05-02</span>
+        <span>2021-05-07</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -314,11 +340,22 @@
     <div class="mr-6 my-2">
         <i class="fas fa-folder mr-1"></i>
         
-        <a href="/categories/%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3.html" class="hover:text-eureka">学习文档</a>
+        <a href="/categories/%E7%AE%97%E6%B3%95.html" class="hover:text-eureka">算法</a>
+        
+        
+        <span>, </span>
+        <a href="/categories/leetcode.html" class="hover:text-eureka">LeetCode</a>
         
     </div>
     
 
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="/series/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.html" class="hover:text-eureka">动态规划</a>
+        
+    </div>
     
 </div>
             </div>
@@ -327,18 +364,67 @@
                     
                     
                     <div class="content">
-                        <br>
-<br>
-Go（又称Golang）是Google开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言。
-<br>
-<br>
-<p>罗伯特·格瑞史莫（Robert Griesemer），罗勃·派克（Rob Pike）及肯·汤普逊（Ken Thompson）于2007年9月开始设计Go，稍后Ian Lance Taylor、Russ Cox加入项目。Go是基于Inferno操作系统所开发的。Go于2009年11月正式宣布推出，成为开放源代码项目，并在Linux及Mac OS X平台上进行了实现，后来追加了Windows系统下的实现。在2016年，Go被软件评价公司TIOBE 选为“TIOBE 2016 年最佳语言”。 目前，Go每半年发布一个二级版本（即从a.x升级到a.y）</p>
+                        <h2 id="题目">题目</h2>
+<p>给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。</p>
+<h3 id="示例1">示例1：</h3>
+<pre><code>输入：nums = [-2,1,-3,4,-1,2,1,-5,4]
+输出：6      
+解释：连续子数组 [4,-1,2,1] 的和最大，为 6 。
+</code></pre><h3 id="示例2">示例2：</h3>
+<pre><code>输入：nums = [1]
+输出：1
+</code></pre><h3 id="示例3">示例3：</h3>
+<pre><code>输入：nums = [0]
+输出：0
+</code></pre><h3 id="示例4">示例4：</h3>
+<pre><code>输入：nums = [-1]
+输出：-1
+</code></pre><h3 id="示例5">示例5：</h3>
+<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">输入：nums = [-100000]
+输出：-100000。
+</code></pre></div><h3 id="提示">提示：</h3>
+<blockquote>
+<ul>
+<li>$1 &lt;= nums.length &lt;= 3 * 10^4$<br></li>
+<li>$-10^5 &lt;= nums[i] &lt;= 10^5$</li>
+</ul>
+</blockquote>
+<h2 id="题解">题解</h2>
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">maxSubArray</span><span class="p">(</span><span class="nx">nums</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+    <span class="nx">c</span> <span class="o">:=</span> <span class="mi">0</span>
+    <span class="nx">m</span> <span class="o">:=</span> <span class="nx">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="nx">_</span><span class="p">,</span><span class="nx">n</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">nums</span><span class="p">{</span>
+        <span class="nx">c</span> <span class="p">=</span> <span class="nf">max</span><span class="p">(</span><span class="nx">c</span> <span class="o">+</span> <span class="nx">n</span><span class="p">,</span> <span class="nx">n</span><span class="p">)</span>
+        <span class="nx">m</span> <span class="p">=</span> <span class="nf">max</span><span class="p">(</span><span class="nx">c</span> <span class="p">,</span> <span class="nx">m</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">m</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">max</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span><span class="p">{</span>
+    <span class="k">if</span> <span class="nx">a</span> <span class="p">&gt;</span> <span class="nx">b</span><span class="p">{</span>
+        <span class="k">return</span> <span class="nx">a</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">b</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="思路">思路</h2>
+<p>利用动态规划去解此题</p>
+<blockquote>
+<p>$f(i)$代表以第$i$个数结尾的连续子数组的最大和<br>
+$f(i)$的上一个值是$f(i-1)$<br>
+$i$位置的数字是$nums[i]$<br>
+如何求$f(i)$我们可以考虑$nums[i]$单独成为一段还是加入$f(i−1)$对应的那一段<br>
+这取决于$nums[i]$和$f(i-1)+nums[i]$的大小，我们希望获得一个比较大的<br>
+所以$f(i)=max(f(i-1)+nums[i],nums[i])$<br>
+所以最终结果就是取$max(f(i))(1&lt;=i&lt;=n)$</p>
+</blockquote>
 
                     </div>
                     
                     <div class="my-4">
     
-    <a href="/tags/%E5%AD%A6%E4%B9%A0%E6%96%87%E6%A1%A3.html" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#学习文档</a>
+    <a href="/tags/%E6%95%B0%E7%BB%84.html" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#数组</a>
+    
+    <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.html" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#动态规划</a>
     
 </div>
                     
@@ -395,6 +481,10 @@ Go（又称Golang）是Google开发的一种静态强类型、编译型、并发
 
 
 
+                </div>
+                
+                <div class="hidden lg:block lg:w-1/4">
+                    
                 </div>
                 
             </div>
