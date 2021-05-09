@@ -3,9 +3,9 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>53.最大子序和 | LeetCode学习 | NeoSuDoc</title>
-<meta name="description" content="LeetCode第53题，最大子序和，动态规划解法，maximum_subarray"/>
-<meta name="keywords" content="leetcode,动态规划,算法,dynamic programming,Golang,数组,string,array,maximum_subarray"/>
+<title>70.爬楼梯 | LeetCode学习 | NeoSuDoc</title>
+<meta name="description" content="LeetCode第70题，爬楼梯，动态规划解法，climbing_stairs"/>
+<meta name="keywords" content="leetcode,动态规划,算法,dynamic programming,Golang,数组,string,array,climbing_stairs"/>
 <link rel="stylesheet" href="/css/eureka.min.css">
 <script defer src="/js/eureka.min.js"></script>
 
@@ -66,7 +66,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/images/icon_hu3c4c8b692d5a46ca71b4ca2347fe7b62_98847_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="最大子序和">
+  content="题目 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？ 注意：给定 n 是一个正整数。 示例1： 输入：2">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -86,8 +86,8 @@
       "item":"/docs/leetcode/dynamic_programming.html"},{
       "@type": "ListItem",
       "position": 4 ,
-      "name":"53.最大子序和",
-      "item":"/docs/leetcode/dynamic_programming/l53_maximum_subarray.html"}]
+      "name":"70.爬楼梯",
+      "item":"/docs/leetcode/dynamic_programming/l70_climbing_stairs.html"}]
 }
 </script>
 
@@ -99,11 +99,11 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "/docs/leetcode/dynamic_programming/l53_maximum_subarray.html"
+        "@id": "/docs/leetcode/dynamic_programming/l70_climbing_stairs.html"
     },
-    "headline": "53.最大子序和 | LeetCode学习 | NeoSuDoc","datePublished": "2021-05-07T00:00:00+00:00",
-    "dateModified": "2021-05-07T00:00:00+00:00",
-    "wordCount":  462 ,
+    "headline": "70.爬楼梯 | LeetCode学习 | NeoSuDoc","datePublished": "2021-05-08T16:53:41+08:00",
+    "dateModified": "2021-05-08T16:53:41+08:00",
+    "wordCount":  618 ,
     "author": {
         "@type": "Person",
         "name": "neosu"
@@ -116,20 +116,22 @@
             "url": "/images/icon.png"
         }
         },
-    "description": "最大子序和"
+    "description": "题目 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？ 注意：给定 n 是一个正整数。 示例1： 输入：2"
 }
-</script><meta property="og:title" content="53.最大子序和 | LeetCode学习 | NeoSuDoc" />
+</script><meta property="og:title" content="70.爬楼梯 | LeetCode学习 | NeoSuDoc" />
 <meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="/images/icon.png">
 
 
-<meta property="og:url" content="/docs/leetcode/dynamic_programming/l53_maximum_subarray.html" />
+<meta property="og:url" content="/docs/leetcode/dynamic_programming/l70_climbing_stairs.html" />
 
 
 
-<meta property="og:description" content="最大子序和" />
+
+<meta property="og:description" content="题目 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？ 注意：给定 n 是一个正整数。 示例1： 输入：2" />
+
 
 
 
@@ -145,10 +147,10 @@
 
 
 
-<meta property="article:published_time" content="2021-05-07T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-05-08T16:53:41&#43;08:00" />
 
 
-<meta property="article:modified_time" content="2021-05-07T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-05-08T16:53:41&#43;08:00" />
 
 
 
@@ -167,9 +169,9 @@
 
 
 
+<meta property="og:see_also" content="/docs/leetcode/dynamic_programming/l53_maximum_subarray.html" />
 
 
-<meta property="og:see_also" content="/docs/leetcode/dynamic_programming/l70_climbing_stairs.html" />
 
 
 
@@ -301,7 +303,7 @@
     
     <li class="py-2">
         <div class="">
-            <a class=" text-eureka  hover:text-eureka"
+            <a class=" hover:text-eureka"
                 href="/docs/leetcode/dynamic_programming/l53_maximum_subarray.html">53.最大子序和</a>
         </div>
         
@@ -312,7 +314,7 @@
     
     <li class="py-2">
         <div class="">
-            <a class=" hover:text-eureka"
+            <a class=" text-eureka  hover:text-eureka"
                 href="/docs/leetcode/dynamic_programming/l70_climbing_stairs.html">70.爬楼梯</a>
         </div>
         
@@ -340,15 +342,15 @@
         </div>
         <div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
             <div class="w-full lg:w-3/4 pl-6 ml-0 mr-auto">
-                <h1 class="font-bold text-3xl text-primary-text">53.最大子序和</h1>
+                <h1 class="font-bold text-3xl text-primary-text">70.爬楼梯</h1>
                 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2021-05-07</span>
+        <span>2021-05-08</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>1分钟阅读时长</span>
+        <span>2分钟阅读时长</span>
     </div>
     
     
@@ -380,59 +382,89 @@
                     
                     <div class="content">
                         <h2 id="题目">题目</h2>
-<p>给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。</p>
-<h3 id="示例1">示例1：</h3>
-<pre><code>输入：nums = [-2,1,-3,4,-1,2,1,-5,4]
-输出：6      
-解释：连续子数组 [4,-1,2,1] 的和最大，为 6 。
-</code></pre><h3 id="示例2">示例2：</h3>
-<pre><code>输入：nums = [1]
-输出：1
-</code></pre><h3 id="示例3">示例3：</h3>
-<pre><code>输入：nums = [0]
-输出：0
-</code></pre><h3 id="示例4">示例4：</h3>
-<pre><code>输入：nums = [-1]
-输出：-1
-</code></pre><h3 id="示例5">示例5：</h3>
-<div class="highlight"><pre class="chroma"><code class="language-markdown" data-lang="markdown">输入：nums = [-100000]
-输出：-100000。
-</code></pre></div><h3 id="提示">提示：</h3>
+<p>假设你正在爬楼梯。需要 n 阶你才能到达楼顶。</p>
+<p>每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？</p>
 <blockquote>
-<ul>
-<li>$1 &lt;= nums.length &lt;= 3 * 10^4$<br></li>
-<li>$-10^5 &lt;= nums[i] &lt;= 10^5$</li>
-</ul>
+<p><strong>注意</strong>：给定 n 是一个正整数。</p>
 </blockquote>
-<h2 id="题解">题解</h2>
-<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">maxSubArray</span><span class="p">(</span><span class="nx">nums</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
-    <span class="nx">c</span> <span class="o">:=</span> <span class="mi">0</span>
-    <span class="nx">m</span> <span class="o">:=</span> <span class="nx">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="k">for</span> <span class="nx">_</span><span class="p">,</span><span class="nx">n</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">nums</span><span class="p">{</span>
-        <span class="nx">c</span> <span class="p">=</span> <span class="nf">max</span><span class="p">(</span><span class="nx">c</span> <span class="o">+</span> <span class="nx">n</span><span class="p">,</span> <span class="nx">n</span><span class="p">)</span>
-        <span class="nx">m</span> <span class="p">=</span> <span class="nf">max</span><span class="p">(</span><span class="nx">c</span> <span class="p">,</span> <span class="nx">m</span><span class="p">)</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="nx">m</span>
-<span class="p">}</span>
-
-<span class="kd">func</span> <span class="nf">max</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span><span class="p">{</span>
-    <span class="k">if</span> <span class="nx">a</span> <span class="p">&gt;</span> <span class="nx">b</span><span class="p">{</span>
-        <span class="k">return</span> <span class="nx">a</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="nx">b</span>
+<h3 id="示例1">示例1：</h3>
+<pre><code>输入：2
+输出：2      
+解释： 有两种方法可以爬到楼顶。
+1.  1 阶 + 1 阶
+2.  2 阶
+</code></pre><h3 id="示例2">示例2：</h3>
+<pre><code>输入： 3
+输出： 3
+解释： 有三种方法可以爬到楼顶。
+1.  1 阶 + 1 阶 + 1 阶
+2.  1 阶 + 2 阶
+3.  2 阶 + 1 阶
+</code></pre><h2 id="题解">题解</h2>
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">climbStairs</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+	<span class="nx">p</span><span class="p">,</span> <span class="nx">q</span><span class="p">,</span> <span class="nx">r</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+		<span class="nx">p</span><span class="p">,</span> <span class="nx">q</span> <span class="p">=</span> <span class="nx">q</span><span class="p">,</span> <span class="nx">r</span>
+		<span class="nx">r</span> <span class="p">=</span> <span class="nx">p</span> <span class="o">+</span> <span class="nx">q</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nx">r</span>
 <span class="p">}</span>
 </code></pre></div><h2 id="思路">思路</h2>
 <p>利用动态规划去解此题</p>
-<blockquote>
-<p>$f(i)$代表以第$i$个数结尾的连续子数组的最大和<br>
-$f(i)$的上一个值是$f(i-1)$<br>
-$i$位置的数字是$nums[i]$<br>
-如何求$f(i)$我们可以考虑$nums[i]$单独成为一段还是加入$f(i−1)$对应的那一段<br>
-这取决于$nums[i]$和$f(i-1)+nums[i]$的大小，我们希望获得一个比较大的<br>
-所以$f(i)=max(f(i-1)+nums[i],nums[i])$<br>
-所以最终结果就是取$max(f(i))(1&lt;=i&lt;=n)$</p>
-</blockquote>
+<p>$f(n)$代表第n个台阶的爬楼方法总数<br>
+因为到达n的上一步，只能是n-1台阶爬一步，或者n-2台阶爬两步<br>
+所以$f(n)=f(n-1)+f(n-2)$<br>
+代码中就是$dp[i]=dp[i-1]+dp[i-2]$</p>
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">climbStairs</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="nx">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="mi">1</span>
+	<span class="p">}</span>
+	<span class="nx">dp</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+	<span class="nx">dp</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">=</span> <span class="mi">1</span>
+	<span class="nx">dp</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">=</span> <span class="mi">2</span>
+	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="c1">//f(n)=f(n-1)+f(n-2)
+</span><span class="c1"></span>		<span class="nx">dp</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="nx">dp</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="nx">dp</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+	<span class="p">}</span>
+    <span class="c1">//返回第n层的方法总数
+</span><span class="c1"></span>	<span class="k">return</span> <span class="nx">dp</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span>
+<span class="p">}</span>   
+</code></pre></div><p>这里我们的dp存了每一层台阶方法数，但是其实我们只要最后一层的方法数，所以还可以继续进行优化。<br>
+首先我们观察发现，我们只使用了$dp[i-1]$和$dp[i-2]$这两个状态，那么就可以改进一下。</p>
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="c1">//这个表示比题解好理解一些  
+</span><span class="c1"></span><span class="kd">func</span> <span class="nf">climbStairs</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="nx">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="mi">1</span>
+	<span class="p">}</span>
+	<span class="c1">// dp := make([]int, n+1)
+</span><span class="c1"></span>	<span class="c1">// dp[1] = 1
+</span><span class="c1"></span>	<span class="c1">// dp[2] = 2
+</span><span class="c1"></span>    <span class="nx">first</span> <span class="o">:=</span> <span class="mi">1</span>
+    <span class="nx">second</span> <span class="o">:=</span> <span class="mi">2</span>
+    <span class="nx">third</span> <span class="o">:=</span> <span class="mi">0</span>
+	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="c1">//f(n)=f(n-1)+f(n-2)
+</span><span class="c1"></span>		<span class="c1">// dp[i] = dp[i-1] + dp[i-2]
+</span><span class="c1"></span>        <span class="nx">third</span> <span class="p">=</span> <span class="nx">first</span> <span class="o">+</span> <span class="nx">second</span> <span class="c1">//计算出第三个位置的值
+</span><span class="c1"></span>        <span class="nx">first</span> <span class="p">=</span> <span class="nx">second</span> <span class="c1">//往前滚动
+</span><span class="c1"></span>        <span class="nx">second</span> <span class="p">=</span> <span class="nx">third</span>
+	<span class="p">}</span>
+    <span class="c1">//返回第n层的方法总数
+</span><span class="c1"></span>	<span class="k">return</span> <span class="nx">second</span>
+<span class="p">}</span> 
 
+<span class="c1">//继续优化
+</span><span class="c1"></span><span class="kd">func</span> <span class="nf">climbStairs</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+    <span class="c1">//r就是第一层
+</span><span class="c1"></span>	<span class="nx">p</span><span class="p">,</span> <span class="nx">q</span><span class="p">,</span> <span class="nx">r</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="c1">//往下滚动
+</span><span class="c1"></span>		<span class="nx">p</span><span class="p">,</span> <span class="nx">q</span> <span class="p">=</span> <span class="nx">q</span><span class="p">,</span> <span class="nx">r</span>
+		<span class="nx">r</span> <span class="p">=</span> <span class="nx">p</span> <span class="o">+</span> <span class="nx">q</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nx">r</span>
+<span class="p">}</span>
+</code></pre></div>
                     </div>
                     
                     <div class="my-4">
@@ -495,11 +527,11 @@ $i$位置的数字是$nums[i]$<br>
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
     <div>
         
+        <span class="block font-bold">上一页</span>
+        <a href="/docs/leetcode/dynamic_programming/l53_maximum_subarray.html" class="block">53.最大子序和</a>
+        
     </div>
     <div class="md:text-right mt-4 md:mt-0">
-        
-        <span class="block font-bold">下一页</span>
-        <a href="/docs/leetcode/dynamic_programming/l70_climbing_stairs.html" class="block">70.爬楼梯</a>
         
     </div>
 </div>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>文章 on NeoSuDoc</title>
-    <link>/posts.html</link>
-    <description>Recent content in 文章 on NeoSuDoc</description>
+    <title>Redis命令 on NeoSuDoc</title>
+    <link>/series/redis%E5%91%BD%E4%BB%A4.html</link>
+    <description>Recent content in Redis命令 on NeoSuDoc</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy; 2021 &lt;a href=&#34;https://neosu.info/&#34;&gt;NeoSu&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Sat, 08 May 2021 09:50:30 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 May 2021 09:50:30 +0800</lastBuildDate><atom:link href="/series/redis%E5%91%BD%E4%BB%A4/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Redis Bitmap位图介绍与操作</title>
       <link>/posts/redis-bitmap.html</link>
