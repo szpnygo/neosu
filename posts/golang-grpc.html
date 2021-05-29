@@ -1,0 +1,138 @@
+<!doctype html><html lang=zh><meta charset=utf-8><meta name=viewport content="width=device-width"><title>Golang Grpc | NeoSuDoc</title><meta name=description content><meta name=keywords content="Golang,gRPC"><link rel=stylesheet href=https://neosu.info/css/eureka.min.css><script defer src=https://neosu.info/js/eureka.min.js></script><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preload href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" as=style onload="this.onload=null,this.rel='stylesheet'"><link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css media=print onload="this.media='all',this.onload=null" crossorigin><script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js crossorigin></script><script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js crossorigin></script><script defer src=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js integrity="sha256-uNYoXefWRqv+PsIF/OflNmwtKM4lStn9yrz2gVl6ymo=" crossorigin></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css integrity=sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X media=print onload="this.media='all',this.onload=null" crossorigin><script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js integrity=sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4 crossorigin></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js integrity=sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa crossorigin></script><script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script><script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js integrity="sha256-Zmpaaj+GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE=" crossorigin></script><link rel=preconnect href=https://www.google-analytics.com crossorigin><script async src="https://www.googletagmanager.com/gtag/js?id=G-8R8WZNZH6H"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-8R8WZNZH6H')</script><link rel=icon type=image/png sizes=32x32 href=https://neosu.info/images/icon_hu3c4c8b692d5a46ca71b4ca2347fe7b62_98847_32x32_fill_box_center_2.png><link rel=apple-touch-icon sizes=180x180 href=https://neosu.info/images/icon_hu3c4c8b692d5a46ca71b4ca2347fe7b62_98847_180x180_fill_box_center_2.png><meta name=description content="gRPC 是一个高性能、开源和通用的 RPC 框架，面向移动和 HTTP/2 设计。 所谓RPC(remote procedure call 远程过程调用)框架实际是提供了一套机制，使得应用程序之间可以进行通信"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"博客","item":"https://neosu.info/posts.html"},{"@type":"ListItem","position":2,"name":"Golang Grpc","item":"https://neosu.info/posts/golang-grpc.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://neosu.info/posts/golang-grpc.html"},"headline":"Golang Grpc | NeoSuDoc","datePublished":"2021-05-29T21:34:21+08:00","dateModified":"2021-05-29T21:34:21+08:00","wordCount":814,"author":{"@type":"Person","name":"neosu"},"publisher":{"@type":"Person","name":"C. Wang","logo":{"@type":"ImageObject","url":"https://neosu.info/images/icon.png"}},"description":"gRPC 是一个高性能、开源和通用的 RPC 框架，面向移动和 HTTP\/2 设计。 所谓RPC(remote procedure call 远程过程调用)框架实际是提供了一套机制，使得应用程序之间可以进行通信"}</script><meta property="og:title" content="Golang Grpc | NeoSuDoc"><meta property="og:type" content="article"><meta property="og:image" content="https://neosu.info/images/icon.png"><meta property="og:url" content="https://neosu.info/posts/golang-grpc.html"><meta property="og:description" content="gRPC 是一个高性能、开源和通用的 RPC 框架，面向移动和 HTTP/2 设计。 所谓RPC(remote procedure call 远程过程调用)框架实际是提供了一套机制，使得应用程序之间可以进行通信"><meta property="og:locale" content="zh"><meta property="og:site_name" content="NeoSuDoc"><meta property="article:published_time" content="2021-05-29T21:34:21+08:00"><meta property="article:modified_time" content="2021-05-29T21:34:21+08:00"><meta property="article:section" content="posts"><meta property="article:tag" content="Golang"><meta property="article:tag" content="gRPC"><meta property="og:see_also" content="https://neosu.info/docs/leetcode/array/l220_contains_duplicate_3.html"><meta property="og:see_also" content="https://neosu.info/docs/leetcode/array/l217_contains_duplicate.html"><meta property="og:see_also" content="https://neosu.info/docs/leetcode/array/l219_contains_duplicate_2.html"><meta property="og:see_also" content="https://neosu.info/docs/leetcode/greedy/l881_boats_to_save_people.html"><meta property="og:see_also" content="https://neosu.info/docs/leetcode/greedy/l714_best_time_to_buy_and_sell_stock_with_transaction_fee.html"><meta property="og:see_also" content="https://neosu.info/docs/leetcode/array/l1046_last_stone_weight.html"><body class="flex flex-col min-h-screen"><header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm"><div class="w-full max-w-screen-xl mx-auto"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");((storageColorScheme=='Auto'||storageColorScheme==null)&&window.matchMedia("(prefers-color-scheme: dark)").matches||storageColorScheme=="Dark")&&document.getElementsByTagName('html')[0].classList.add('dark')</script><nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0"><a href=/ class="mr-6 text-primary-text text-xl font-bold">NeoSuDoc</a>
+<button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+<i class="fas fa-bars"></i></button><div id=target class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20"><div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0"><a href=/posts.html class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">博客</a>
+<a href=/docs/server.html class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">服务端</a>
+<a href=/docs/mobile.html class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">移动端</a>
+<a href=/docs/leetcode.html class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent mr-4">LeetCode</a></div><div class=flex><div class="relative pt-4 md:pt-0"><div class="cursor-pointer hover:text-eureka" id=lightDarkMode><i class="fas fa-adjust"></i></div><div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open></div><div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions><span class="px-4 py-1 hover:text-eureka" name=Light>浅色</span>
+<span class="px-4 py-1 hover:text-eureka" name=Dark>深色</span>
+<span class="px-4 py-1 hover:text-eureka" name=Auto>自动</span></div></div></div></div><div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile></div></nav><script>let element=document.getElementById('lightDarkMode');storageColorScheme==null||storageColorScheme=='Auto'?document.addEventListener('DOMContentLoaded',()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change',switchDarkMode)}):storageColorScheme=="Light"?(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'sun'),element.firstElementChild.classList.add('fa-sun')):storageColorScheme=="Dark"&&(element.firstElementChild.classList.remove('fa-adjust'),element.firstElementChild.setAttribute("data-icon",'moon'),element.firstElementChild.classList.add('fa-moon')),document.addEventListener('DOMContentLoaded',()=>{getcolorscheme(),switchBurger()})</script></div></header><main class="flex-grow pt-16"><div class=pl-scrollbar><div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto"><div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12"><div class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8"><h1 class="font-bold text-3xl text-primary-text">Golang Grpc</h1><div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text"><div class="mr-6 my-2"><i class="fas fa-calendar mr-1"></i>
+<span>2021-05-29</span></div><div class="mr-6 my-2"><i class="fas fa-clock mr-1"></i>
+<span>2分钟阅读时长</span></div><div class="mr-6 my-2"><i class="fas fa-folder mr-1"></i>
+<a href=https://neosu.info/categories/golang.html class=hover:text-eureka>Golang</a></div></div><div class=content><p>gRPC 是一个高性能、开源和通用的 RPC 框架，面向移动和 HTTP/2 设计。</p><p>所谓RPC(remote procedure call 远程过程调用)框架实际是提供了一套机制，使得应用程序之间可以进行通信，而且也遵从server/client模型。使用的时候客户端调用server端提供的接口就像是调用本地的函数一样。</p><h2 id=安装grpc包>安装grpc包</h2><p>首先我们需要安装和准备grpc所需要的环境</p><div class=highlight><pre class=chroma><code class=language-golang data-lang=golang><span class=k>go</span> <span class=nx>get</span> <span class=nx>google</span><span class=p>.</span><span class=nx>golang</span><span class=p>.</span><span class=nx>org</span><span class=o>/</span><span class=nx>grpc</span>
+</code></pre></div><p>同时需要下载和安装protocol buffer编译器</p><p><a href=https://github.com/protocolbuffers/protobuf/releases>https://github.com/protocolbuffers/protobuf/releases</a></p><p>这里我下载的是protoc-3.17.1-osx-x86_64.zip，解压放到环境变量中就可以直接使用。</p><pre><code>export PROTOC=&quot;/Users/neosu/protoc-3.17.1-osx-x86_64/bin&quot;
+export PATH=$PROTOC:$PATH
+</code></pre><h2 id=定义服务>定义服务</h2><p>首先第一步是使用protocol buffer定义gRPC服务还有方法的请求和响应类型。
+创建hello.proto文件</p><p>首先写入默认的一些东西</p><div class=highlight><pre class=chroma><code class=language-golang data-lang=golang><span class=c1>//版本号
+</span><span class=c1></span><span class=nx>syntax</span> <span class=p>=</span> <span class=s>&#34;proto3&#34;</span><span class=p>;</span>
+<span class=c1>//go的包
+</span><span class=c1></span><span class=nx>option</span> <span class=nx>go_package</span> <span class=p>=</span> <span class=s>&#34;neobaran.com/study/golang/grpc/client/hello&#34;</span><span class=p>;</span>
+<span class=kn>package</span> <span class=nx>hello</span><span class=p>;</span>
+</code></pre></div><p>然后定义服务</p><div class=highlight><pre class=chroma><code class=language-golang data-lang=golang><span class=nx>service</span> <span class=nx>HelloRouter</span> <span class=p>{</span>
+    <span class=c1>//这就是一个普通的请求
+</span><span class=c1></span>    <span class=nx>rpc</span> <span class=nf>SayHello</span><span class=p>(</span><span class=nx>HelloRequest</span><span class=p>)</span> <span class=nf>returns</span> <span class=p>(</span><span class=nx>HelloReply</span><span class=p>){}</span>
+    <span class=c1>//这是一个流请求
+</span><span class=c1></span>    <span class=nx>rpc</span> <span class=nf>GetStream</span> <span class=p>(</span><span class=nx>StreamRequestData</span><span class=p>)</span> <span class=nf>returns</span> <span class=p>(</span><span class=nx>stream</span> <span class=nx>StreamResponseData</span><span class=p>);</span>
+<span class=p>}</span>
+
+<span class=nx>message</span> <span class=nx>HelloRequest</span><span class=p>{</span>
+    <span class=kt>string</span> <span class=nx>name</span> <span class=p>=</span> <span class=mi>1</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=nx>message</span> <span class=nx>HelloReply</span><span class=p>{</span>
+    <span class=kt>string</span> <span class=nx>message</span> <span class=p>=</span> <span class=mi>2</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=nx>message</span> <span class=nx>StreamRequestData</span><span class=p>{</span>
+    <span class=kt>string</span> <span class=nx>data</span> <span class=p>=</span> <span class=mi>1</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=nx>message</span> <span class=nx>StreamResponseData</span><span class=p>{</span>
+    <span class=kt>string</span> <span class=nx>data</span> <span class=p>=</span> <span class=mi>1</span><span class=p>;</span>
+<span class=p>}</span>
+
+</code></pre></div><h2 id=生成客户端和服务端代码>生成客户端和服务端代码</h2><div class=highlight><pre class=chroma><code class=language-shell data-lang=shell>protoc --go_out<span class=o>=</span><span class=nv>plugins</span><span class=o>=</span>grpc:./hello  hello/hello.proto
+</code></pre></div><p>此命令会生成hello.pb.go文件，引入到我们的项目中。</p><h3 id=服务端代码>服务端代码</h3><p>我们开始创建我们的服务端代码</p><div class=highlight><pre class=chroma><code class=language-golang data-lang=golang><span class=kn>package</span> <span class=nx>main</span>
+
+<span class=kn>import</span> <span class=p>(</span>
+	<span class=s>&#34;context&#34;</span>
+	<span class=s>&#34;fmt&#34;</span>
+	<span class=s>&#34;log&#34;</span>
+	<span class=s>&#34;net&#34;</span>
+	<span class=s>&#34;time&#34;</span>
+
+	<span class=s>&#34;google.golang.org/grpc&#34;</span>
+	<span class=s>&#34;neobaran.com/study/golang/grpc/server/hello&#34;</span>
+<span class=p>)</span>
+
+<span class=c1>//定义一个struct
+</span><span class=c1></span><span class=kd>type</span> <span class=nx>HelloServer</span> <span class=kd>struct</span><span class=p>{}</span>
+
+<span class=c1>//实现我们在之前proto中定义的方法
+</span><span class=c1></span><span class=kd>func</span> <span class=p>(</span><span class=nx>s</span> <span class=o>*</span><span class=nx>HelloServer</span><span class=p>)</span> <span class=nf>SayHello</span><span class=p>(</span><span class=nx>ctx</span> <span class=nx>context</span><span class=p>.</span><span class=nx>Context</span><span class=p>,</span> <span class=nx>req</span> <span class=o>*</span><span class=nx>hello</span><span class=p>.</span><span class=nx>HelloRequest</span><span class=p>)</span> <span class=p>(</span><span class=o>*</span><span class=nx>hello</span><span class=p>.</span><span class=nx>HelloReply</span><span class=p>,</span> <span class=kt>error</span><span class=p>)</span> <span class=p>{</span>
+	<span class=nx>log</span><span class=p>.</span><span class=nf>Println</span><span class=p>(</span><span class=s>&#34;request : &#34;</span> <span class=o>+</span> <span class=nx>req</span><span class=p>.</span><span class=nx>Name</span><span class=p>)</span>
+	<span class=k>return</span> <span class=o>&amp;</span><span class=nx>hello</span><span class=p>.</span><span class=nx>HelloReply</span><span class=p>{</span><span class=nx>Message</span><span class=p>:</span> <span class=s>&#34;hello world&#34;</span><span class=p>},</span> <span class=kc>nil</span>
+<span class=p>}</span>
+
+<span class=c1>//一个流的方法
+</span><span class=c1></span><span class=kd>func</span> <span class=p>(</span><span class=nx>s</span> <span class=o>*</span><span class=nx>HelloServer</span><span class=p>)</span> <span class=nf>GetStream</span><span class=p>(</span><span class=nx>req</span> <span class=o>*</span><span class=nx>hello</span><span class=p>.</span><span class=nx>StreamRequestData</span><span class=p>,</span> <span class=nx>res</span> <span class=nx>hello</span><span class=p>.</span><span class=nx>HelloRouter_GetStreamServer</span><span class=p>)</span> <span class=kt>error</span> <span class=p>{</span>
+    <span class=c1>//每秒自动输出时间
+</span><span class=c1></span>	<span class=k>for</span> <span class=p>{</span>
+		<span class=nx>time</span><span class=p>.</span><span class=nf>Sleep</span><span class=p>(</span><span class=mi>1</span> <span class=o>*</span> <span class=nx>time</span><span class=p>.</span><span class=nx>Second</span><span class=p>)</span>
+		<span class=nx>res</span><span class=p>.</span><span class=nf>Send</span><span class=p>(</span><span class=o>&amp;</span><span class=nx>hello</span><span class=p>.</span><span class=nx>StreamResponseData</span><span class=p>{</span><span class=nx>Data</span><span class=p>:</span> <span class=nx>fmt</span><span class=p>.</span><span class=nf>Sprintf</span><span class=p>(</span><span class=s>&#34;%v&#34;</span><span class=p>,</span> <span class=nx>time</span><span class=p>.</span><span class=nf>Now</span><span class=p>().</span><span class=nf>Unix</span><span class=p>())})</span>
+	<span class=p>}</span>
+<span class=p>}</span>
+
+<span class=kd>func</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
+    <span class=c1>//设置gRPC的端口监听
+</span><span class=c1></span>	<span class=nx>lis</span><span class=p>,</span> <span class=nx>_</span> <span class=o>:=</span> <span class=nx>net</span><span class=p>.</span><span class=nf>Listen</span><span class=p>(</span><span class=s>&#34;tcp&#34;</span><span class=p>,</span> <span class=s>&#34;:8081&#34;</span><span class=p>)</span>
+    <span class=c1>//开启一个gRPC服务
+</span><span class=c1></span>	<span class=nx>s</span> <span class=o>:=</span> <span class=nx>grpc</span><span class=p>.</span><span class=nf>NewServer</span><span class=p>()</span>
+    <span class=c1>//注册我们的服务
+</span><span class=c1></span>	<span class=nx>hello</span><span class=p>.</span><span class=nf>RegisterHelloRouterServer</span><span class=p>(</span><span class=nx>s</span><span class=p>,</span> <span class=o>&amp;</span><span class=nx>HelloServer</span><span class=p>{})</span>
+	<span class=nx>log</span><span class=p>.</span><span class=nf>Println</span><span class=p>(</span><span class=s>&#34;grpc server run&#34;</span><span class=p>)</span>
+    <span class=c1>//开启监听
+</span><span class=c1></span>	<span class=nx>s</span><span class=p>.</span><span class=nf>Serve</span><span class=p>(</span><span class=nx>lis</span><span class=p>)</span>
+<span class=p>}</span>
+</code></pre></div><p>这样我们的服务端代码就写好了，运行起来，我们接下来去写客户端代码</p><h3 id=客户端代码>客户端代码</h3><div class=highlight><pre class=chroma><code class=language-golang data-lang=golang><span class=kn>package</span> <span class=nx>main</span>
+
+<span class=kn>import</span> <span class=p>(</span>
+	<span class=s>&#34;context&#34;</span>
+	<span class=s>&#34;fmt&#34;</span>
+	<span class=s>&#34;log&#34;</span>
+
+	<span class=s>&#34;google.golang.org/grpc&#34;</span>
+	<span class=s>&#34;neobaran.com/study/golang/grpc/client/hello&#34;</span>
+<span class=p>)</span>
+
+<span class=kd>func</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
+    <span class=c1>//发起链接
+</span><span class=c1></span>	<span class=nx>conn</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>grpc</span><span class=p>.</span><span class=nf>Dial</span><span class=p>(</span><span class=s>&#34;127.0.0.1:8081&#34;</span><span class=p>,</span> <span class=nx>grpc</span><span class=p>.</span><span class=nf>WithInsecure</span><span class=p>())</span>
+	<span class=k>if</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+		<span class=nx>log</span><span class=p>.</span><span class=nf>Fatalf</span><span class=p>(</span><span class=s>&#34;grpc did not connect : %v&#34;</span><span class=p>,</span> <span class=nx>err</span><span class=p>)</span>
+	<span class=p>}</span>
+	<span class=k>defer</span> <span class=nx>conn</span><span class=p>.</span><span class=nf>Close</span><span class=p>()</span>
+    <span class=c1>//开启gRPC客户端
+</span><span class=c1></span>	<span class=nx>c</span> <span class=o>:=</span> <span class=nx>hello</span><span class=p>.</span><span class=nf>NewHelloRouterClient</span><span class=p>(</span><span class=nx>conn</span><span class=p>)</span>
+
+	<span class=nx>name</span> <span class=o>:=</span> <span class=s>&#34;NeoSu&#34;</span>
+
+    <span class=c1>//调用SayHello方法
+</span><span class=c1></span>	<span class=nx>r</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>c</span><span class=p>.</span><span class=nf>SayHello</span><span class=p>(</span><span class=nx>context</span><span class=p>.</span><span class=nf>Background</span><span class=p>(),</span> <span class=o>&amp;</span><span class=nx>hello</span><span class=p>.</span><span class=nx>HelloRequest</span><span class=p>{</span><span class=nx>Name</span><span class=p>:</span> <span class=nx>name</span><span class=p>})</span>
+	<span class=k>if</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+		<span class=nx>log</span><span class=p>.</span><span class=nf>Fatalf</span><span class=p>(</span><span class=s>&#34;request error : %v&#34;</span><span class=p>,</span> <span class=nx>err</span><span class=p>)</span>
+	<span class=p>}</span>
+	<span class=nx>log</span><span class=p>.</span><span class=nf>Println</span><span class=p>(</span><span class=nx>r</span><span class=p>.</span><span class=nx>Message</span><span class=p>)</span>
+
+    <span class=c1>//请求我们定义的那个流的方法
+</span><span class=c1></span>	<span class=nx>res</span><span class=p>,</span> <span class=nx>_</span> <span class=o>:=</span> <span class=nx>c</span><span class=p>.</span><span class=nf>GetStream</span><span class=p>(</span><span class=nx>context</span><span class=p>.</span><span class=nf>Background</span><span class=p>(),</span> <span class=o>&amp;</span><span class=nx>hello</span><span class=p>.</span><span class=nx>StreamRequestData</span><span class=p>{</span><span class=nx>Data</span><span class=p>:</span> <span class=s>&#34;test&#34;</span><span class=p>})</span>
+	<span class=nx>result</span><span class=p>,</span> <span class=nx>_</span> <span class=o>:=</span> <span class=nx>res</span><span class=p>.</span><span class=nf>Recv</span><span class=p>()</span>
+	<span class=nx>fmt</span><span class=p>.</span><span class=nf>Println</span><span class=p>(</span><span class=s>&#34;result:&#34;</span><span class=p>,</span> <span class=nx>result</span><span class=p>.</span><span class=nx>Data</span><span class=p>)</span>
+	<span class=k>for</span> <span class=p>{</span>
+        <span class=c1>//不断的接受流内容
+</span><span class=c1></span>		<span class=nx>data</span><span class=p>,</span> <span class=nx>recvErr</span> <span class=o>:=</span> <span class=nx>res</span><span class=p>.</span><span class=nf>Recv</span><span class=p>()</span>
+		<span class=k>if</span> <span class=nx>recvErr</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+			<span class=nx>log</span><span class=p>.</span><span class=nf>Println</span><span class=p>(</span><span class=nx>recvErr</span><span class=p>.</span><span class=nf>Error</span><span class=p>())</span>
+			<span class=k>break</span>
+		<span class=p>}</span>
+		<span class=nx>log</span><span class=p>.</span><span class=nf>Println</span><span class=p>(</span><span class=nx>data</span><span class=p>.</span><span class=nx>Data</span><span class=p>)</span>
+	<span class=p>}</span>
+
+<span class=p>}</span>
+</code></pre></div></div><div class=my-4><a href=https://neosu.info/tags/golang.html class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Golang</a>
+<a href=https://neosu.info/tags/grpc.html class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#gRPC</a></div><div class=py-2><div class="flex flex-col md:flex-row items-center my-8"><a href=https://neosu.info/authors/neosu.html class="w-24 h-24 md:mr-4"><img src=https://neosu.info/images/icon.png class="w-full bg-primary-bg rounded-full" alt=Avatar></a><div class="w-full md:w-auto mt-4 md:mt-0"><a href=https://neosu.info/authors/neosu.html class="block font-bold text-lg pb-1 mb-2 border-b">NeoSu</a>
+<span class="block pb-2">三非程序员。非专业独立开发者，非专业全栈工程师，非专业自媒体。头条号：全栈工程师。公众号：技术小苏。</span>
+<a href=mailto:neo@neobaran.com class=mr-1><i class="fas fa-envelope"></i></a>
+<a href=https://twitter.com/neo_szp class=mr-1><i class="fab fa-twitter"></i></a>
+<a href=https://github.com/szpnygo class=mr-1><i class="fab fa-github"></i></a></div></div><div class=alignleft><script type=text/javascript>amzn_assoc_ad_type="banner",amzn_assoc_marketplace="amazon",amzn_assoc_region="US",amzn_assoc_placement="assoc_banner_placement_default",amzn_assoc_banner_type="ez",amzn_assoc_p="48",amzn_assoc_width="728",amzn_assoc_height="90",amzn_assoc_tracking_id="neosuinfo-20",amzn_assoc_linkid="df66ad95ac6430cc63551f8d99a699fa"</script><script src="//z-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1"></script></div></div><div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t"><div></div><div class="md:text-right mt-4 md:mt-0"><span class="block font-bold">下一页</span>
+<a href=https://neosu.info/posts/mysql_transaction.html class=block>MySQL事务学习</a></div></div><script id=utterances src=https://utteranc.es/client.js issue-term=og:title repo=szpnygo/neosu theme=preferred-color-scheme crossorigin=anonymous async></script><script>((storageColorScheme=='Auto'||storageColorScheme==null)&&window.matchMedia("(prefers-color-scheme: dark)").matches||storageColorScheme=="Dark")&&document.getElementById('utterances').setAttribute('theme','github-dark')</script></div><div class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded p-6"><h2 class="text-lg font-semibold mb-4">相关</h2><div class=content><a href=https://neosu.info/docs/leetcode/array/l220_contains_duplicate_3.html>220.存在重复元素 III</a><br><a href=https://neosu.info/docs/leetcode/array/l217_contains_duplicate.html>217.存在重复元素</a><br><a href=https://neosu.info/docs/leetcode/array/l219_contains_duplicate_2.html>219.存在重复元素 II</a><br><a href=https://neosu.info/docs/leetcode/greedy/l881_boats_to_save_people.html>881.救生艇</a><br><a href=https://neosu.info/docs/leetcode/greedy/l714_best_time_to_buy_and_sell_stock_with_transaction_fee.html>714.买卖股票的最佳时机含手续费</a><br><a href=https://neosu.info/docs/leetcode/array/l1046_last_stone_weight.html>1046.最后一块石头的重量</a><br></div></div></div><script>document.addEventListener('DOMContentLoaded',()=>{hljs.initHighlightingOnLoad()})</script></div></div></main><footer class=pl-scrollbar><div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b"><p class="text-sm text-tertiary-text">&copy; 2021 <a href=https://neosu.info/>NeoSu</a>
+&#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p></div></div></footer></body></html>
